@@ -1,0 +1,100 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.parentdiv {
+    display: flex;
+    justify-content: center;
+    margin-top: 5rem;
+}
+
+.bus {
+    position: relative;
+    width: 67%;
+    right: -3rem;
+}
+
+.login {
+    position: absolute;
+    right: 27rem;
+    top: 6rem;
+    line-height: 2rem;   
+}
+
+.flip {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    position: relative;
+    top: 6rem;
+    line-height: 2rem;
+    right: 15rem;
+}
+
+input {
+    width: 20rem;
+    height: 2rem;
+    border-radius: 0.5rem;
+    border-left: none;
+    border-top: none;
+}
+
+input::placeholder {
+    position: absolute;
+    left: 2rem;
+}
+
+.btn {
+    width: 12rem;
+    border-radius: 2rem;
+    height: 2rem;
+    top: 5px;
+    position: relative;
+    color: white;
+    font-weight: 500;
+    background-color: #00bdb0;
+    border: none;
+}
+
+.btn:hover {
+    cursor: pointer;
+}
+
+.TC {
+    font-weight: 800;
+    color: #00bdb0;
+    cursor: pointer;
+    text-decoration: none;
+    margin-left: 7rem;
+}
+
+.buttons {
+    display: flex;
+    justify-content: center;
+    position: absolute;
+    gap: 1rem;
+    top: 10rem;
+    right: 37rem;
+}
+
+.signin {
+    text-decoration: none;
+    color: black;
+}
+
+.signup {
+    text-decoration: none;
+    color: black;
+}
+
+.signin:hover {
+    cursor: pointer;
+    color: #00bdb0;
+}
+
+.signup:hover {
+    cursor: pointer;
+    color: #00bdb0;
+}

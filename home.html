@@ -1,0 +1,937 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <title>Teergo</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            background-color: whitesmoke;
+        }
+
+        header {
+            background-color: #333;
+            color: #fff;
+            padding: 15px;
+            text-align: center;
+        }
+
+        nav {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: #333;
+            padding: 10px;
+        }
+
+        .logo {
+            margin-right: 47rem;
+        }
+
+        .logo img {
+            width: 34px;
+            height: auto;
+        }
+
+        .navbar {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .navbar a {
+            color: #fff;
+            text-decoration: none;
+            padding: 10px 20px;
+            margin: 0px;
+            border-radius: 5px;
+            transition: background-color 0.3s;
+        }
+
+        .navbar a:hover {
+            background-color: #555;
+        }
+
+        .slider-container {
+            width: 100%;
+            margin: auto;
+            overflow: hidden;
+            position: relative;
+            /* margin-top: 20px; */
+        }
+
+        .slider-container2 {
+            width: 100%;
+            margin: auto;
+            overflow: hidden;
+            position: relative;
+            /* margin-top: 20px; */
+        }
+
+        .slider-wrapper {
+            display: flex;
+            transition: transform 0.5s ease-in-out;
+        }
+
+        .slider-wrapper2 {
+            display: flex;
+            transition: transform 0.5s ease-in-out;
+        }
+
+        .slider-item {
+            flex: 0 0 100%;
+            box-sizing: border-box;
+        }
+
+        .slider-item img {
+            width: 100%;
+            height: 28rem;
+            /* border-radius: 41px; */
+        }
+
+        .slider-item2 {
+            flex: 0 0 100%;
+            box-sizing: border-box;
+        }
+
+        .slider-item2 img {
+            width: 100%;
+            height: 28rem;
+            /* border-radius: 41px; */
+        }
+
+        /* Navigation for the slider */
+        .slider-nav {
+            position: absolute;
+            top: 50%;
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+            transform: translateY(-50%);
+        }
+
+        .slider-nav button {
+            background: none;
+            border: none;
+            font-size: 20px;
+            cursor: pointer;
+            color: #fff;
+            transition: color 0.3s;
+        }
+
+        .slider-nav button:hover {
+            color: #555;
+        }
+
+        .slider-nav2 {
+            position: absolute;
+            top: 50%;
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+            transform: translateY(-50%);
+        }
+
+        .slider-nav2 button {
+            background: none;
+            border: none;
+            font-size: 20px;
+            cursor: pointer;
+            color: #fff;
+            transition: color 0.3s;
+        }
+
+        .slider-nav2 button:hover {
+            color: #555;
+        }
+
+        .prev {
+            margin-left: 10px;
+        }
+
+        .next {
+            margin-right: 10px;
+        }
+
+        .Logo {
+            font-size: 45px;
+        }
+
+        .footer {
+            background-color: #000;
+            color: white;
+            text-align: center;
+            padding: 10px;
+        }
+
+        .offer {
+            margin-left: 10%;
+            height: 5px;
+            width: 5px;
+        }
+
+        .card-body {
+            width: 107%;
+            padding: 2%;
+            margin-left: 100px;
+        }
+     
+
+        .search-container {
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            padding: 20px;
+            width: 400px;
+            text-align: center;
+        }
+
+        .search-container input,
+        .search-container select {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 15px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            box-sizing: border-box;
+        }
+
+        .search-container button {
+            background-color: cadetblue;
+            color: #fff;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+
+        .search-container button:hover {
+            background-color: cadetblue;
+            color: #fff;
+            padding: 10px 20px;
+            border-radius: 4px;
+            cursor: pointer;
+            width: 28rem;
+            height: 4rem;
+        }
+
+        .search-container {
+            display: flex;
+            gap: 2rem;
+            width: 84.4rem;
+            height: 4.5rem;
+            margin-top: 1rem;
+        }
+
+        .slider-item2 img {
+            width: 100%;
+            height: 10rem;
+            border-radius: 41px;
+            margin: auto;
+        }
+
+        .card-img {
+            width: 10rem;
+            height: 100px;
+        }
+
+        .card-button {
+            position: relative;
+            bottom: 3rem;
+            margin-left: 10rem;
+        }
+
+        .routes {
+            position: relative;
+            bottom: 6rem;
+        }
+
+        .Teer-Go {
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .safety-item {
+            /* display: flex; */
+            text-align: center;
+            flex-basis: 23%;
+            /* Adjust width as needed */
+            padding: 10px;
+            /* Adjust padding as needed */
+        }
+
+        .Routes-img-bottom {
+            width: 50px;
+            /* Adjust width as needed */
+            margin-bottom: 10px;
+            /* Adjust margin as needed */
+        }
+
+        /* Additional styling for demonstration purposes */
+        .safety-title {
+            margin: 2%;
+            font-size: 18px;
+        }
+
+        p {
+            margin: 0;
+        }
+
+        .WhyTree-Go {
+            margin: 20%;
+            height: 10%;
+        }
+
+        .card-safety {
+
+            margin: 0%;
+            width: 300px;
+            height: 200px;
+            padding: 9px;
+            border: 2px solid #ccc;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            margin-right: 25px;
+        }
+
+        .home-page .lounge-section .loung-buttons-presenting {
+            margin-top: 64px;
+        }
+
+        .loungeimg-part {
+            position: relative;
+            margin-left: 44%;
+        }
+
+        .shift {
+            width: 39rem;
+            position: absolute;
+            margin-top: 81px;
+        }
+
+
+        /* footer */
+
+
+        .container {
+            max-width: 1170px;
+            margin: auto;
+        }
+
+        .row {
+            display: flex;
+            flex-wrap: wrap;
+        }
+
+        ul {
+            list-style: none;
+        }
+
+        .footer {
+            background-color: #24262b;
+            padding: 70px 0;
+        }
+
+        .footer-col {
+            width: 25%;
+            padding: 0 15px;
+        }
+
+        .footer-col h4 {
+            font-size: 18px;
+            color: #ffffff;
+            text-transform: capitalize;
+            margin-bottom: 35px;
+            font-weight: 500;
+            position: relative;
+        }
+
+        .footer-col h4::before {
+            content: '';
+            position: absolute;
+            left: 0;
+            bottom: -10px;
+            background-color: #e91e63;
+            height: 2px;
+            box-sizing: border-box;
+            width: 50px;
+        }
+
+        .footer-col ul li:not(:last-child) {
+            margin-bottom: 10px;
+        }
+
+        .footer-col ul li a {
+            font-size: 16px;
+            text-transform: capitalize;
+            color: #ffffff;
+            text-decoration: none;
+            font-weight: 300;
+            color: #bbbbbb;
+            display: block;
+            transition: all 0.3s ease;
+        }
+
+        .footer-col ul li a:hover {
+            color: #ffffff;
+            padding-left: 8px;
+        }
+
+        .footer-col .social-links a {
+            display: inline-block;
+            height: 40px;
+            width: 40px;
+            background-color: rgba(255, 255, 255, 0.2);
+            margin: 0 10px 10px 0;
+            text-align: center;
+            line-height: 40px;
+            border-radius: 50%;
+            color: #ffffff;
+            transition: all 0.5s ease;
+        }
+
+        .footer-col .social-links a:hover {
+            color: #24262b;
+            background-color: #ffffff;
+        }
+
+        .para1 {
+            display: flex;
+            background-color: #000;
+            color: white;
+        }
+
+        .lounge-button {
+            margin-top: 212px;
+            margin-left: 50px;
+
+        }
+
+        .button {
+            position: absolute;
+
+        }
+
+        .big-container {
+            display: flex;
+        }
+
+        .sub-container {
+            display: flex;
+            padding: 57px;
+            margin: 5px;
+            position: absolute;
+        }
+
+        .image-box {
+            display: flex;
+        }
+
+        .nav-container {
+            padding: 0;
+            margin: 13px;
+            box-sizing: border-box;
+            background-color: whitesmoke;
+            border: 1px solid #000;
+        }
+
+        .right-side {
+            list-style-type: none;
+        }
+
+        .right-side li {
+            display: inline-block;
+            text-decoration: none;
+        }
+    
+    </style>
+</head>
+
+<body>
+
+    <nav>
+        <div class="logo">
+            <img src="image/logo7.png" alt="Slider Image 1">
+        </div>
+
+        <div class="navbar">
+            <a><img src="image/offer.png" style="height: 29px;" alt="img1"></a>
+            <a><img src="image/bell.png" style="height: 29px;" alt="img1"></a>
+            <a href="about/">My Bookings</a>
+            <a href="contact/">Manage Bookings</a>
+            <a href="#"><i class='bx bxs-user'></i></a>
+            <a href="signin.html"><i class='bx bx-chevron-down'></i></a>
+        </div>
+    </nav>
+    <div class="slider-container">
+        <div class="slider-wrapper">
+            <div class="slider-item">
+                <img src="image/pic1.jpeg" alt="Slider Image 1">
+            </div>
+            <div class="slider-item">
+                <img src="image/car.jpeg" alt="Slider Image 2">
+            </div>
+            <div class="slider-item">
+                <img src="image/banner.jpg" alt="Slider Image 3">
+            </div>
+        </div>
+
+        <!-- Navigation buttons -->
+        <div class="slider-nav">
+            <button class="prev" onclick="prevSlide()"></button>
+            <button class="next" onclick="nextSlide()"></button>
+        </div>
+    </div>
+    <div class="search-container">
+        <input type="text" placeholder="Enter Departure" id="departure">
+        <img src="image/locationlogo.png" alt="">
+        <img src="https://cdn.nuego.co.in/greencell/assets/images/flip.png" alt="">
+        <input type="text" placeholder="Enter Destination" id="destination">
+        <input type="date" id="date">
+        <select id="persons">
+            <option value="1">1 person</option>
+            <option value="2">2 persons</option>
+            <option value="3">3 persons</option>
+            <option value="4">4 persons</option>
+            <option value="5">5 persons</option>
+            <!-- Add more options as needed -->
+        </select>
+        <button onclick="search()">Search Buses</button>
+
+    </div>
+    <div class="slider-container2">
+        <div class="slider-wrapper2">
+            <div class="slider-item2">
+                <img src="image/per.jpg" alt="Slider Image 1">
+            </div>
+            <div class="slider-item2">
+                <img src="image/for.jpg" alt="Slider Image 2">
+            </div>
+            <div class="slider-item2">
+                <img src="image/der.jpg" alt="Slider Image 3">
+            </div>
+        </div>
+    </div>
+    <div class="slider-nav2">
+        <button class="Previous" onclick="PreviousSlide2()">❮</button>
+        <button class="Next" onclick="NextSlide2()">❯</button>
+    </div>
+    <div class="offer">
+    </div>
+    <div class="logo">
+        <img src="image/offer.png" alt="Slider Image 1">
+    </div>
+
+    <div class="card" style="display: flex;">
+
+        <div class="card-body">
+            <img src="image/ofi.jpg" class="card-img-top" alt="..." style="width: 60%">
+            <h5 class="card-title"></h5>
+            <p class="card-text"></p>
+            <a href="#" class="btn btn-primary"></a>
+
+        </div>
+        <div class="card-body">
+            <img src="image/tii.jpg" class="card-img-top" alt="..." style="width: 60%">
+            <h5 class="card-title"></h5>
+            <p class="card-text"></p>
+            <a href="#" class="btn btn-primary"></a>
+
+        </div>
+        <div class="card-body">
+            <img src="image/po.jpg" class="card-img-top" alt="..." style="width: 60%">
+            <h5 class="card-title"></h5>
+            <p class="card-text"></p>
+            <a href="#" class="btn btn-primary"></a>
+
+        </div>
+        <!-- <div class="card-body">
+            <img src="image/flas.png" class="card-img-top" alt="..." style="width: 60%">
+            <h5 class="card-title"></h5>
+            <p class="card-text"></p>
+            <a href="#" class="btn btn-primary"></a>
+
+        </div> -->
+    </div>
+
+    <div class="Routes" style="display: flex;">
+
+        <div class="Routes">
+            <h5 class="card-title"></h5 style="margin-left:10rem">
+            <img src="image/rishikesh.png" class="Routes-img-bottom" alt="..." style="width: 90%;">
+
+        </div>
+        <div class="Routes">
+            <h5 class="card-title"></h5>
+            <img src="image/agra_59e7496ed6.png" class="Routes-img-bottom" alt="..." style="width: 90%;">
+        </div>
+
+        <div class="Routes">
+            <h5 class="card-title"></h5>
+            <img src="image/agra_59e7496ed6.png" class="Routes-img-bottom" alt="..." style="width: 90%;">
+        </div>
+
+        <div class="Routes">
+            <h5 class="card-title"></h5>
+            <img src="image/rishikesh.png" class="Routes-img-bottom" alt="..." style="width: 90%;">
+        </div>
+        <div class="Routes">
+            <h5 class="card-title"></h5>
+            <img src="image/rishikesh.png" class="Routes-img-bottom" alt="..." style="width: 90%;">
+        </div>
+    </div>
+
+
+    <div class="Teer-Go safety">
+
+        <div class="safety-item">
+            <img src="image/veri.png" class="Routes-img-bottom" alt="...">
+            <h3 class="safety-title">Teer-Go safety</h3>
+            <p>trigo safety</p>
+        </div>
+
+
+        <div class="safety-item">
+            <img src="https://cdn.nuego.co.in/greencell/assets/images/NuegoSafety-img/img2.png"
+                class="Routes-img-bottom" alt="...">
+            <h3 class="safety-title"></h3>
+            <p>Breath Analyzer</p>
+        </div>
+
+        <div class="safety-item">
+            <img src="https://cdn.nuego.co.in/greencell/assets/images/NuegoSafety-img/img3.png"
+                class="Routes-img-bottom" alt="...">
+            <h3 class="safety-title"></h3>
+            <p>Regularly Sanitized</p>
+        </div>
+
+        <div class="safety-item">
+            <img src="https://cdn.nuego.co.in/greencell/assets/images/NuegoSafety-img/img4.png"
+                class="Routes-img-bottom" alt="...">
+            <h3 class="safety-title"></h3>
+            <p>CCTV Surveilence</p>
+        </div>
+        <div class="safety-item">
+            <img src="https://cdn.nuego.co.in/greencell/assets/images/NuegoSafety-img/img6.png"
+                class="Routes-img-bottom" alt="...">
+            <h3 class="safety-title"></h3>
+            <p>No ignition while charging</p>
+        </div>
+    </div>
+    <div class="Why Tree-Go">
+        <div class="Tree-Go">
+            <img src="https://cdn.nuego.co.in/greencell/assets/images/our-routes-desktop.png" class="Routes-img-bottom"
+                alt="...">
+            <h3 class="safety-title">Why Tree-Go</h3>
+        </div>
+    </div>
+    <div>
+
+
+        <div class="card" style="display: flex;">
+
+            <div class="card-safety">
+                <div class="d-flex gap-24">
+                    <img src="https://cdn.nuego.co.in/greencell/assets/images/h_new_4.png" class="card-img-top"
+                        alt="..." style="width: 25%" position: relative; margin: -5%;>
+
+                    <h5 class="card-title"></h5>
+                    <p class="card-text"></p>
+                    <a href="#" class="btn btn-primary"></a>
+                    <p>Safety</p>
+                    <p>With our stringent safety checks, we ensure you travel completely safe</p>
+                </div>
+            </div>
+            <!-- <div class="card" style="display: flex;"> -->
+
+            <div class="card-safety">
+                <img src="https://cdn.nuego.co.in/greencell/assets/images/h_new_3.png" class="card-img-top" alt="..."
+                    style="width: 25%" position: relative; margin: -5%;>
+
+                <h5 class="card-title"></h5>
+                <p class="card-text"></p>
+                <a href="#" class="btn btn-primary"></a>
+                <p>Zero Emission</p>
+                <p>Our Zero Emission buses require no gasoline or diesel, and emit no tailpipe pollution.</p>
+            </div>
+
+            <div class="card-safety">
+                <img src="https://cdn.nuego.co.in/greencell/assets/images/h_new_2.png" class="card-img-top" alt="..."
+                    style="width: 25%" position: relative; margin: -5%;>
+
+                <h5 class="card-title"></h5>
+                <p class="card-text"></p>
+                <a href="#" class="btn btn-primary"></a>
+                <p>Noiseless</p>
+                <p>Speak freely in the silent cabins of our buses that also glide noiselessly outside.</p>
+            </div>
+            <div class="card-safety">
+                <img src="https://cdn.nuego.co.in/greencell/assets/images/h_new_1.png" class="card-img-top" alt="..."
+                    style="width: 25%" position: relative; margin: -5%;>
+
+                <h5 class="card-title"></h5>
+                <p class="card-text"></p>
+                <a href="#" class="btn btn-primary"></a>
+                <p>Exciting Benefits</p>
+                <p>We have the best offers compared to other players with some never-before discounts.</p>
+            </div>
+        </div>
+        <!-- <div class="lounge-section black-1E1E26-bg mx-lg-0 "> -->
+        <!-- <div class="px-3"><div class="row">
+                        <div class="col-12 col-lg-6 content w-100 p-x-4"> -->
+    </div><br><br>
+    <div class="para1">
+        <div class="shift">
+            <h1 class="ubuntu-700w-32s-48h white-color margin-bottom-32">Teer-Go Lounge</h1>
+            <p class="paragraph">Introducing Teer-Go Lounges, a place where you could wait for your Coaches in the
+                safety and comfort of our premium amenities</p>
+        </div>
+        <div class="lounge-button">
+            <button class="button">
+                <p>View All</p>
+            </button>
+        </div>
+        <div class="loungeimg-part"><img src="https://cdn.nuego.co.in/greencell/assets/images/loungebg2.png" alt="img"
+                class="w-100">
+        </div>
+    </div><br><br>
+    <div class="big-container">
+        <h1>Frequently Asked Question</h1>
+        <nav class="nav-container">
+            <!-- <div class="sub-container"> -->
+            <ul class="right-side">
+                <li style="display: inline-block; margin-right: 10px;"><a>Journey</a></li>
+                <li style="display: inline-block; margin-right: 10px;"><a>Reschedule</a></li>
+                <li style="display: inline-block; margin-right: 10px;"><a>Cancellation &amp; Refund</a></li>
+                <li style="display: inline-block; margin-right: 10px;"><a>Lounge</a></li>
+                <li style="display: inline-block; margin-right: 10px;"><a>Payment</a></li>
+                <li style="display: inline-block;"><a>Booking</a></li>
+            </ul>
+        </nav>
+        <!-- </div> -->
+
+        </ul>
+    </div>
+    <div class="container">
+        <div class="containerBox">
+            <div class="m-4">
+                <div class="accordion" id="myAccordion-4">
+                    <div class="accordion-item">
+                        <div class="question">
+
+                            <!-- <h2 class="accordion-header" id="headingThree">
+                            <div class="accordion-button collapsed" aria-expanded="false"
+                                aria-controls="collapse-4"> -->
+                            <p>What are the documents required while travelling by
+                                Teer-Go?</p>
+                        </div>
+                        <div id="collapse-4" class="accordion-collapse collapse " aria-labelledby="heading-4">
+                            <!-- <div class="card-body"><p style="font-family: &quot;Open Sans&quot;, sans-serif; color: rgb(87, 86, 86); font-weight: 400; font-size: 16px; margin-bottom: 16px; margin-top: 16px;">-->
+                            <p> You need to carry a govt authorized photo id along with SMS/Whatsapp/email of your
+                                ticket.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="m-4">
+            <div class="accordion" id="myAccordion-6">
+                <div class="accordion-item">
+                    <div class="question">
+                        <h2 class="accordion-header" id="headingThree"><button class="accordion-button collapsed"
+                                aria-expanded="false" aria-controls="collapse-6">What is your baggage policy?</button>
+                        </h2>
+                        <div id="collapse-6" class="accordion-collapse collapse " aria-labelledby="heading-6">
+                            <div class="card-body">
+                                <p>1 Medium suitcase or two small suitcases per guest is permitted. Excess charges will
+                                    be levied incase of additional baggage.You are requested to visit the terms and
+                                    conditions tab on the homepage for more details on the policy.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="m-4">
+            <div class="accordion" id="myAccordion-7">
+                <div class="accordion-item">
+                    <div class="question"></div>
+                    <h2 class="accordion-header" id="headingThree"><button class="accordion-button collapsed"
+                            aria-expanded="false" aria-controls="collapse-7">I missed my luggage/some contents of the
+                            luggage</button></h2>
+                    <div id="collapse-7" class="accordion-collapse collapse " aria-labelledby="heading-7">
+                        <div class="card-body">
+                            <p>
+                                <!-- style="font-family: &quot;Open Sans&quot;, sans-serif; color: rgb(87, 86, 86); font-weight: 400; font-size: 16px; margin-bottom: 16px; margin-top: 16px;"> -->
+                                We would request you to get in touch with us via email on <a
+                                    href="mailto:info@redwolfhitech.com.in">info@redwolfhitech.com.in</a> or our 24*7
+                                contact centre number <a href="tel:+91 9988908111">+91 9988908111</a>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="image-box">
+        <align="right"><img src="https://nuego.in/static/media/Tree.96a52747f087ff6bdc91.png">
+    </div>
+    </div>
+
+    <!--   
+            </div> -->
+    </div>
+    <footer class="footer">
+        <div class="container">
+            <div class="row">
+                <div class="footer-col">
+                    <h4>company</h4>
+                    <ul>
+                        <li><a href="#">Teer-Go Travel</a></li>
+                        <li><a href="#">about us</a></li>
+                        <li><a href="#">our services</a></li>
+                        <li><a href="#">privacy policy</a></li>
+                        <li><a href="#">all Teer-Go</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>get help</h4>
+                    <ul>
+                        <li><a href="#">FAQ</a></li>
+                        <li><a href="#">shipping</a></li>
+                        <li><a href="#">returns</a></li>
+                        <li><a href="#">order status</a></li>
+                        <li><a href="#">payment options</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>follow us</h4>
+                    <div class="social-links">
+                        <a href="www.facebook.com/profile.php?id=61553777321124&mibextid=ZbWKwL"><i
+                                class='bx bxl-facebook'></i></a>
+                        <a href="#"><i class='bx bxl-twitter'></i></a>
+                        <a href="www.instagram.com/redwolfhitech?igsh=YnE1amNiNTdiMDI4"><i
+                                class='bx bxl-instagram'></i></a>
+                        <a href="www.linkedin.com/in/ashi-jain-3988252a6"><i class='bx bxl-linkedin'></i></a>
+                    </div>
+                    <!-- <div class="footer-col"> -->
+                    <!-- <h4>online shop</h4>
+                    <ul>
+                        <li><a href="#">Pen</a></li>
+                        <li><a href="#">Pencil</a></li>
+                        <li><a href="#">Notebook</a></li>
+                        <li><a href="#">Eraser</a></li>
+                        <li><a href="#">Sharpener</a></li>
+                        <li><a href="#">Colour Box</a></li> -->
+                    <!-- <li><a href="#">Extension Boards</a></li> -->
+                    <!-- <li><a href="#">Data cables</a></li> -->
+                    <!-- <li><a href="#">Selfie sticks</a></li> -->
+                    <!-- <li><a href="#">Neckbands</a></li> -->
+
+                    <!-- <li><a href="#"></a></li>
+                    </ul>
+                </div> -->
+                    <!-- <div class="footer-col">
+                    <h4>follow us</h4>
+                    <div class="social-links">
+                        <a href="www.facebook.com/profile.php?id=61553777321124&mibextid=ZbWKwL"><i
+                                class='bx bxl-facebook'></i></a>
+                        <a href="#"><i class='bx bxl-twitter'></i></a>
+                        <a href="www.instagram.com/redwolfhitech?igsh=YnE1amNiNTdiMDI4"><i
+                                class='bx bxl-instagram'></i></a>
+                        <a href="www.linkedin.com/in/ashi-jain-3988252a6"><i class='bx bxl-linkedin'></i></a>
+                    </div>
+                </div> -->
+                </div>
+            </div>
+
+    </footer>
+
+    <footer class="footer">
+        <p>&copy; 2024 Your Company Name. All rights reserved.</p>
+    </footer>
+
+
+
+    <!-- Your content goes here -->
+
+    <script>
+        function search() {
+            var departure = document.getElementById("departure").value;
+            var destination = document.getElementById("destination").value;
+            var date = document.getElementById("date").value;
+            var persons = document.getElementById("persons").value;
+
+            // Perform search or any other action with the entered values
+            console.log("Departure:", departure);
+            console.log("Destination:", destination);
+            console.log("Date:", date);
+            console.log("Persons:", persons);
+        }
+        // JavaScript for the automatic slider functionality
+        let currentSlide = 0;
+
+        function showSlide(index) {
+            const sliderWrapper = document.querySelector('.slider-wrapper');
+            const totalSlides = document.querySelectorAll('.slider-item').length;
+
+            if (index < 0) {
+                currentSlide = totalSlides - 1;
+            } else if (index >= totalSlides) {
+                currentSlide = 0;
+            } else {
+                currentSlide = index;
+            }
+
+            const translateValue = -currentSlide * 100 + '%';
+            sliderWrapper.style.transform = 'translateX(' + translateValue + ')';
+        }
+
+        function prevSlide() {
+            showSlide(currentSlide - 1);
+        }
+
+        function nextSlide() {
+            showSlide(currentSlide + 1);
+        }
+
+        let currentSlide2 = 0;
+
+        function showSlide2(index) {
+            const sliderWrapper = document.querySelector('.slider-wrapper2');
+            const totalSlides = document.querySelectorAll('.slider-item2').length;
+
+            if (index < 0) {
+                currentSlide2 = totalSlides - 1;
+            } else if (index >= totalSlides) {
+                currentSlide2 = 0;
+            } else {
+                currentSlide2 = index;
+            }
+
+            const translateValue = -currentSlide2 * 100 + '%';
+            sliderWrapper.style.transform = 'translateX(' + translateValue + ')';
+        }
+
+        function PreviousSlide2() {
+            showSlide2(currentSlide2 - 1);
+        }
+
+        function NextSlide2() {
+            showSlide2(currentSlide2 + 1);
+        }
+
+        // Automatically advance to the next slide every 3 seconds (adjust as needed)
+        setInterval(function () {
+            nextSlide();
+        }, 3000);
+    </script>
+
+    <script src="https://unpkg.com/boxicons@2.1.4/dist/boxicons.js"></script>
+</body>
+
+</html>
